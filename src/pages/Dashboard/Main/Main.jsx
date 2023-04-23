@@ -7,7 +7,6 @@ const Main = ({ title }) => {
       <Helmet>
         <title>{title}</title>
       </Helmet>
-      Main
     </section>
   );
 };
