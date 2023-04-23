@@ -79,10 +79,7 @@ export default function Navbar() {
             </span>
           </div>
           <div
-            onClick={() => {
-              // navigate("/");
-              dispatch({ type: "set", modalLogout: true });
-            }}
+            onClick={() => dispatch({ type: "set", modalLogout: true })}
             className="active:scale-95 transition-all cursor-pointer flex items-center gap-2 text-light"
           >
             <span>

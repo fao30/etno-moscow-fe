@@ -7,6 +7,8 @@ import Users from "./pages/Dashboard/Users/Users";
 import { Toaster } from "react-hot-toast";
 import Navbar from "./components/Navbar/Navbar";
 import Survey from "./pages/Dashboard/Main/components/Survey";
+import PasswordChange from "./auth/ChangePassword";
+import LogoutModal from "./auth/Logout";
 
 const RequireAuthHelper = ({ children }) => {
   if (!localStorage.access_token) {
@@ -27,6 +29,7 @@ const App = () => {
           }}
         />
         <Navbar />
+        <LogoutModal />
         <Suspense fallback={<></>}>
           <Routes>
             <Route path="/" element={<Home title="Войти" />} />
@@ -40,6 +43,10 @@ const App = () => {
               <Route
                 path="survey/:id"
                 element={<Survey title="Админка: пользователи" />}
+              />
+              <Route
+                path="password-change"
+                element={<PasswordChange title="Админка: сменить пароль" />}
               />
             </Route>
           </Routes>

@@ -38,10 +38,10 @@
     @apply text-dark2 dark:text-light;
   }
   .themedBg {
-    @apply bg-light dark:bg-dark;
+    @apply bg-light dark:bg-dark transition-colors;
   }
   .themedBg2 {
-    @apply bg-light dark:bg-dark2;
+    @apply bg-light dark:bg-dark2 transition-colors;
   }
   .themedButton {
     @apply bg-link2 hover:bg-link2Hover dark:bg-link dark:hover:bg-linkHover;
