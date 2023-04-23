@@ -70,7 +70,7 @@ const Login = () => {
           />
           <p
             onClick={() => setForgotPassword(true)}
-            className="pSmaller3 link cursor-pointer"
+            className="text-right pSmaller3 themed cursor-pointer"
           >
             не помню пароль
           </p>

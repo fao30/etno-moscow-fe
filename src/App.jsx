@@ -9,8 +9,8 @@ import Navbar from "./components/Navbar/Navbar";
 import Survey from "./pages/Dashboard/Main/components/Survey";
 import PasswordChange from "./auth/ChangePassword";
 import LogoutModal from "./auth/Logout";
-import { SkewLoader } from "react-spinners";
 import { Icon } from "@iconify/react";
+import ScrollToTop from "./components/ScrollToTop";
 
 const RequireAuthHelper = ({ children }) => {
   if (!localStorage.access_token) {
@@ -30,7 +30,7 @@ const App = () => {
             duration: 2000,
           }}
         />
-        <Navbar />
+
         <LogoutModal />
         <Suspense
           fallback={
@@ -39,6 +39,7 @@ const App = () => {
             </div>
           }
         >
+          <Navbar />
           <Routes>
             <Route path="/" element={<Home title="Войти" />} />
             <Route path="*" element={<Navigate to="/" />} />
@@ -59,6 +60,7 @@ const App = () => {
             </Route>
           </Routes>
         </Suspense>
+        <ScrollToTop />
       </HelmetProvider>
     </BrowserRouter>
   );
