@@ -3,7 +3,11 @@ import { useParams } from "react-router-dom";
 
 const Survey = () => {
   const params = useParams();
-  return <div>Survey: {params.id}</div>;
+  return (
+    <section className="pl-longer6 pr-normal themedBg">
+      Survey: {params.id}
+    </section>
+  );
 };
 
 export default Survey;
