@@ -41,8 +41,7 @@ export default function Navbar() {
                 key={i}
                 className={`font-semibold rounded-lg flex items-center text-light transition-all gap-2 h-14 md:px-2 p ${
                   e?.href === location.pathname ||
-                  (location?.pathname?.includes("survey") &&
-                    e?.type === "survey")
+                  location?.pathname?.includes(e?.type)
                     ? "from-hover dark:from-dark to-transparent bg-gradient-to-r"
                     : "bg-transparent scale-90"
                 }
@@ -51,8 +50,7 @@ export default function Navbar() {
                 <div
                   className={`w-1 md:w-2 h-10 rounded-lg transition-all ${
                     e?.href === location.pathname ||
-                    (location?.pathname?.includes("survey") &&
-                      e?.type === "survey")
+                    location?.pathname?.includes(e?.type)
                       ? "opacity-100 bg-light "
                       : "opacity-0"
                   }`}
