@@ -10,6 +10,12 @@ export function getAccessTokenInfo() {
   return accessToken;
 }
 
+export function getTheme() {
+  const theme = localStorage.getItem("theme");
+  if (!theme) return;
+  return theme;
+}
+
 export function getRole() {
   const role = localStorage.getItem("role");
   if (!role) return;

@@ -29,13 +29,13 @@
 
 @layer components {
   .themed {
-    @apply text-primary dark:text-light;
+    @apply text-primary dark:text-light transition-colors;
   }
   .themedBorder {
-    @apply border-primary dark:border-light;
+    @apply border-primary dark:border-light transition-colors;
   }
   .themedText {
-    @apply text-dark2 dark:text-light;
+    @apply text-dark2 dark:text-light transition-colors;
   }
   .themedBg {
     @apply bg-light dark:bg-dark transition-colors;
@@ -47,10 +47,10 @@
     @apply bg-link2 hover:bg-link2Hover dark:bg-link dark:hover:bg-linkHover;
   }
   .link {
-    @apply text-link2 dark:text-link;
+    @apply text-link2 dark:text-link transition-colors;
   }
   .btn {
-    @apply font-medium p outline-none shadow active:scale-95 transition-all rounded-lg text-light bg-primary px-6 py-2;
+    @apply font-medium p outline-none shadow active:scale-95 transition-all rounded-lg text-light dark:text-dark2 bg-primary hover:bg-hover dark:bg-light  dark:hover:bg-light2 px-6 py-2;
   }
   .h1 {
     @apply font-bold text-4xl md:text-5xl xl:text-6xl;

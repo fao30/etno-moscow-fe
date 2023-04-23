@@ -9,6 +9,8 @@ import Navbar from "./components/Navbar/Navbar";
 import Survey from "./pages/Dashboard/Main/components/Survey";
 import PasswordChange from "./auth/ChangePassword";
 import LogoutModal from "./auth/Logout";
+import { SkewLoader } from "react-spinners";
+import { Icon } from "@iconify/react";
 
 const RequireAuthHelper = ({ children }) => {
   if (!localStorage.access_token) {
@@ -30,7 +32,13 @@ const App = () => {
         />
         <Navbar />
         <LogoutModal />
-        <Suspense fallback={<></>}>
+        <Suspense
+          fallback={
+            <div className="themed min-h-screen flex items-center justify-center">
+              <Icon icon="eos-icons:loading" width={75} />
+            </div>
+          }
+        >
           <Routes>
             <Route path="/" element={<Home title="Войти" />} />
             <Route path="*" element={<Navigate to="/" />} />
